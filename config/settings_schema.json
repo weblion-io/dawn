@@ -7,58 +7,14 @@
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes/os20/themes-by-shopify/dawn",
     "theme_support_url": "https://support.shopify.com/"
   },
+
+
   {
-    "name": "Product cards",
+    "name": "Badges",
     "settings": [
       {
         "type": "select",
-        "id": "product_cards_style",
-        "options": [
-          {
-            "value": "standard",
-            "label": "Standard"
-          },
-          {
-            "value": "card",
-            "label": "Card"
-          }
-        ],
-        "default": "standard",
-        "label": "Style"
-      },
-      {
-        "type": "range",
-        "id": "product_cards_corner_radius",
-        "min": 0,
-        "max": 20,
-        "step": 2,
-        "unit": "px",
-        "label": "Corner radius",
-        "default": 0
-      },
-      {
-        "type": "select",
-        "id": "product_cards_text_alignment",
-        "options": [
-          {
-            "value": "left",
-            "label": "Left"
-          },
-          {
-            "value": "center",
-            "label": "Center"
-          },
-          {
-            "value": "right",
-            "label": "Right"
-          }
-        ],
-        "default": "left",
-        "label": "Text alignment"
-      },
-      {
-        "type": "select",
-        "id": "product_cards_badge_position",
+        "id": "badge_position",
         "options": [
           {
             "value": "bottom left",
@@ -79,10 +35,111 @@
         ],
         "default": "bottom left",
         "label": "Badge position"
+      }
+    ]
+  },
+  
+
+  {
+    "name": "Cards",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General"
       },
       {
         "type": "select",
-        "id": "product_cards_color_scheme",
+        "id": "cards_style",
+        "options": [
+          {
+            "value": "standard",
+            "label": "Standard"
+          },
+          {
+            "value": "card",
+            "label": "Card"
+          }
+        ],
+        "default": "standard",
+        "label": "Style"
+      },
+      {
+        "type": "range",
+        "id": "cards_padding",
+        "min": 0,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding",
+        "default": 15
+      },
+      {
+        "type": "select",
+        "id": "cards_text_alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left",
+        "label": "Text alignment"
+      },
+      {
+        "type": "header",
+        "content": "Borders"
+      },
+      {
+        "type": "range",
+        "id": "cards_border_radius",
+        "min": 0,
+        "max": 30,
+        "step": 3,
+        "unit": "px",
+        "label": "Corner radius",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "cards_border_width",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "px",
+        "label": "Border width",
+        "default": 1
+      },
+      {
+        "type": "range",
+        "id": "cards_border_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "%",
+        "label": "Border opacity",
+        "default": 10
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "cards_border_color",
+        "default": "#000000",
+        "label": "Border color"
+      },
+      {
+        "type": "select",
+        "id": "cards_color_scheme",
         "options": [
           {
             "value": "accent-1",
@@ -110,6 +167,9 @@
       }
     ]
   },
+
+
+
   {
     "name": "t:settings_schema.colors.name",
     "settings": [

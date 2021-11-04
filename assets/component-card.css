@@ -139,6 +139,7 @@
 
 .card-information {
   width: 100%;
+  text-align: var(--cards-text-alignment);
 }
 
 .card-information > * {
@@ -285,20 +286,22 @@
 /* Update */ 
 
 .card--card,
-.card--standard .card__inner { 
-  border-radius: var(--product-card-corner-radius);
+.card--standard .card__inner,
+.article-card { 
+  border-radius: var(--cards-border-radius);
   overflow: hidden;
-  text-align: var(--product-card-text-alignment);
-  border: 0.1rem solid;
+  text-align: var(--cards-text-alignment);
+  border: var(--cards-border-width) solid rgba(var(--cards-border-color), var(--cards-border-opacity));
 }
 
 .card-information {
-  text-align: var(--product-card-text-alignment);
+  text-align: var(--cards-text-alignment);
   margin-top: 2rem;
+  padding: 0;
 }
 
 .card__media,
-.media {
+.media:not(.article-card__image, .multicolumn-card__media) {
   position: absolute;
   width: 100%;
   top: 0;
@@ -311,7 +314,7 @@
 
 .card__content {
   position: relative;
-  padding: 1rem;
+  padding: var(--cards-padding);
   display: grid;
   width: 100%;
   grid-template-rows: minmax(0,1fr) max-content minmax(0,1fr);
@@ -322,7 +325,7 @@
 }
 
 .card__information {
-  padding: 1rem;
+  padding: 0;
   grid-row-start: 2;
 }
 

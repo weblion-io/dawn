@@ -65,6 +65,15 @@
 .multicolumn:not(.background-none) .multicolumn-card {
   background: rgba(var(--color-foreground), 0.04);
   height: 100%;
+  border-radius: var(--cards-border-radius);
+  overflow: hidden;
+  border: var(--cards-border-width) solid rgba(var(--cards-border-color), var(--cards-border-opacity));
+}
+
+.multicolumn.background-none .multicolumn-card__image-wrapper {
+  border-radius: var(--cards-border-radius);
+  overflow: hidden;
+  border: var(--cards-border-width) solid rgba(var(--cards-border-color), var(--cards-border-opacity));
 }
 
 .multicolumn.background-secondary .multicolumn-card {
@@ -198,7 +207,8 @@
 }
 
 .multicolumn-card__info {
-  padding: 2.5rem 2.5rem;
+  /* padding: 2.5rem 2.5rem;*/
+  padding: var(--cards-padding);
 }
 
 .background-none .multicolumn-card__info {
