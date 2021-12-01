@@ -48,6 +48,55 @@
         "show_text_below": true
       }
     },
+    "1638391973b270ad0f": {
+      "type": "image-banner",
+      "blocks": {
+        "1638391973510d5115-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "medium"
+          }
+        },
+        "1638391973510d5115-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "1638391973510d5115-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop now",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1638391973510d5115-0",
+        "1638391973510d5115-1",
+        "1638391973510d5115-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/woman-practicing-her-skincare-routine.jpg",
+        "image_2": "shopify:\/\/shop_images\/205bc6d6_0634.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "end-end",
+        "show_text_box": true,
+        "desktop_content_alignment": "right",
+        "color_scheme": "accent-2",
+        "mobile_content_alignment": "right",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "1637778587301ff5b9": {
       "type": "image-banner",
       "blocks": {
@@ -244,65 +293,16 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
-    },
-    "1638391973b270ad0f": {
-      "type": "image-banner",
-      "blocks": {
-        "1638391973510d5115-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "medium"
-          }
-        },
-        "1638391973510d5115-1": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "1638391973510d5115-2": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "1638391973510d5115-0",
-        "1638391973510d5115-1",
-        "1638391973510d5115-2"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/woman-practicing-her-skincare-routine.jpg",
-        "image_2": "shopify:\/\/shop_images\/205bc6d6_0634.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "end-end",
-        "show_text_box": true,
-        "desktop_content_alignment": "right",
-        "color_scheme": "accent-2",
-        "mobile_content_alignment": "right",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
     }
   },
   "order": [
     "image_banner",
+    "1638391973b270ad0f",
     "1637778587301ff5b9",
     "rich_text",
     "featured_products",
     "collage",
     "video",
-    "multi_column",
-    "1638391973b270ad0f"
+    "multi_column"
   ]
 }
