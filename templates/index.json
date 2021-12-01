@@ -1,5 +1,55 @@
 {
   "sections": {
+    "1637778587301ff5b9": {
+      "type": "image-banner",
+      "blocks": {
+        "1637778587ad5b6ac6-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "1637778587ad5b6ac6-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Share information about your brand with your customers.Share information about your brand with your customers.",
+            "heading_size": "medium"
+          }
+        },
+        "1637778587ad5b6ac6-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1637778587ad5b6ac6-1",
+        "1637778587ad5b6ac6-0",
+        "1637778587ad5b6ac6-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_230.png",
+        "image_2": "shopify:\/\/shop_images\/Screenshot_2021-10-21_at_12.41_2.png",
+        "image_overlay_opacity": 20,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "center-start",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "accent-1",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -13,7 +63,8 @@
         "c4b1da8e-e8e1-4d86-ba8e-de4acf017edc": {
           "type": "text",
           "settings": {
-            "text": "Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store."
+            "text": "Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.",
+            "text_style": "body"
           }
         },
         "button": {
@@ -35,69 +86,70 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/AcidLeague-Experimental-Soda-Vinegars-Orange-Crop_1080x_ba7e897c-0fa0-4978-b9f0-5a28fe28a4fc.jpg",
+        "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": false,
-        "desktop_content_position": "flex-start flex-start",
+        "desktop_content_position": "start-start",
         "show_text_box": false,
         "desktop_content_alignment": "left",
-        "image_overlay_opacity": 10,
         "color_scheme": "background-2",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
     },
-    "1637778587301ff5b9": {
+    "1638391973b270ad0f": {
       "type": "image-banner",
       "blocks": {
-        "1637778587ad5b6ac6-0": {
+        "1638391973510d5115-0": {
           "type": "heading",
           "settings": {
-            "heading": "Share information about your brand with your customers.Share information about your brand with your customers.",
+            "heading": "Image banner",
             "heading_size": "large"
           }
         },
-        "1637778587ad5b6ac6-1": {
+        "1638391973510d5115-1": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template."
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
           }
         },
-        "1637778587ad5b6ac6-2": {
+        "1638391973510d5115-2": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
+            "button_label_1": "Shop now",
+            "button_link_1": "shopify:\/\/products\/art-deco-cyclamen",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "1637778587ad5b6ac6-0",
-        "1637778587ad5b6ac6-1",
-        "1637778587ad5b6ac6-2"
+        "1638391973510d5115-0",
+        "1638391973510d5115-1",
+        "1638391973510d5115-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screenshot_2021-10-21_at_12.41_2.png",
-        "image_height": "medium",
+        "image": "shopify:\/\/shop_images\/woman-practicing-her-skincare-routine.jpg",
+        "image_2": "shopify:\/\/shop_images\/205bc6d6_0634.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
         "adapt_height_first_image": false,
-        "desktop_content_position": "center flex-start",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
-        "image_overlay_opacity": 30,
-        "color_scheme": "accent-1",
-        "mobile_content_alignment": "left",
+        "desktop_content_position": "end-end",
+        "show_text_box": true,
+        "desktop_content_alignment": "right",
+        "color_scheme": "accent-2",
+        "mobile_content_alignment": "right",
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
     },
     "rich_text": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -133,6 +185,7 @@
     },
     "featured_products": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "collection": "all",
@@ -149,6 +202,7 @@
     },
     "collage": {
       "type": "collage",
+      "disabled": true,
       "blocks": {
         "video": {
           "type": "video",
@@ -189,6 +243,7 @@
     },
     "video": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "Video",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
@@ -198,6 +253,7 @@
     },
     "multi_column": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "column1": {
           "type": "column",
@@ -242,15 +298,119 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
+    },
+    "16383920995ef713c0": {
+      "type": "image-banner",
+      "blocks": {
+        "1638392099106bf552-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Top left",
+            "heading_size": "medium"
+          }
+        },
+        "1638392099106bf552-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "1638392099106bf552-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1638392099106bf552-0",
+        "1638392099106bf552-1",
+        "1638392099106bf552-2"
+      ],
+      "settings": {
+        "image_2": "shopify:\/\/shop_images\/AcidLeague_Hero_Image.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "start-start",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "inverse",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "1638392448183af7b8": {
+      "type": "image-banner",
+      "blocks": {
+        "163839244846b69e78-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "medium"
+          }
+        },
+        "163839244846b69e78-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "163839244846b69e78-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "163839244846b69e78-0",
+        "163839244846b69e78-1",
+        "163839244846b69e78-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/PassionFruitOolong-Cropped_1000x_1a8fbab1-a8e0-4ca7-b0d5-5298e1ae6fee.jpg",
+        "image_2": "shopify:\/\/shop_images\/2021-08063-Proxies-177_1000x_07887254-e5c7-4386-bdd7-8ca2d619eba2.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "start-end",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "accent-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
-    "image_banner",
     "1637778587301ff5b9",
+    "image_banner",
+    "1638391973b270ad0f",
     "rich_text",
     "featured_products",
     "collage",
     "video",
-    "multi_column"
+    "multi_column",
+    "16383920995ef713c0",
+    "1638392448183af7b8"
   ]
 }
