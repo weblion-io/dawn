@@ -32,6 +32,7 @@
         "type": "header",
         "settings": {
           "color_scheme": "accent-2",
+          "logo": "shopify:\/\/shop_images\/Megabundle-bananaflower_1_1200x800_crop_center_3.png",
           "logo_width": 100,
           "logo_position": "middle-left",
           "menu": "main-menu",
