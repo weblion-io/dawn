@@ -1,55 +1,5 @@
 {
   "sections": {
-    "1637778587301ff5b9": {
-      "type": "image-banner",
-      "blocks": {
-        "1637778587ad5b6ac6-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Share information about your brand with your customers.Share information about your brand with your customers.",
-            "heading_size": "large"
-          }
-        },
-        "1637778587ad5b6ac6-1": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "1637778587ad5b6ac6-2": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "1637778587ad5b6ac6-0",
-        "1637778587ad5b6ac6-1",
-        "1637778587ad5b6ac6-2"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/touristswelcome-hotel-067jpg.jpg",
-        "image_overlay_opacity": 30,
-        "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "center flex-start",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
-        "color_scheme": "accent-1",
-        "mobile_content_alignment": "left",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -93,6 +43,56 @@
         "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "1637778587301ff5b9": {
+      "type": "image-banner",
+      "blocks": {
+        "1637778587ad5b6ac6-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "1637778587ad5b6ac6-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Share information about your brand with your customers.Share information about your brand with your customers.",
+            "heading_size": "medium"
+          }
+        },
+        "1637778587ad5b6ac6-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1637778587ad5b6ac6-1",
+        "1637778587ad5b6ac6-0",
+        "1637778587ad5b6ac6-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_230.png",
+        "image_2": "shopify:\/\/shop_images\/Screenshot_2021-10-21_at_12.41_2.png",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "center flex-start",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "accent-1",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": true,
         "show_text_below": true
@@ -301,8 +301,8 @@
     }
   },
   "order": [
-    "1637778587301ff5b9",
     "image_banner",
+    "1637778587301ff5b9",
     "1638391973b270ad0f",
     "rich_text",
     "featured_products",
