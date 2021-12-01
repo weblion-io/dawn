@@ -13,7 +13,8 @@
         "c4b1da8e-e8e1-4d86-ba8e-de4acf017edc": {
           "type": "text",
           "settings": {
-            "text": "Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store."
+            "text": "Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.",
+            "text_style": "body"
           }
         },
         "button": {
@@ -35,12 +36,12 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/AcidLeague-Experimental-Soda-Vinegars-Orange-Crop_1080x_ba7e897c-0fa0-4978-b9f0-5a28fe28a4fc.jpg",
+        "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": false,
         "desktop_content_position": "flex-start flex-start",
         "show_text_box": false,
         "desktop_content_alignment": "left",
-        "image_overlay_opacity": 10,
         "color_scheme": "background-2",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": true,
@@ -61,7 +62,8 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template."
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
           }
         },
         "1637778587ad5b6ac6-2": {
@@ -83,13 +85,13 @@
         "1637778587ad5b6ac6-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screenshot_2021-10-21_at_12.41_2.png",
+        "image": "shopify:\/\/shop_images\/touristswelcome-hotel-067jpg.jpg",
+        "image_overlay_opacity": 30,
         "image_height": "medium",
         "adapt_height_first_image": false,
         "desktop_content_position": "center flex-start",
         "show_text_box": false,
         "desktop_content_alignment": "left",
-        "image_overlay_opacity": 30,
         "color_scheme": "accent-1",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": true,
@@ -242,6 +244,55 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
+    },
+    "1638391973b270ad0f": {
+      "type": "image-banner",
+      "blocks": {
+        "1638391973510d5115-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "medium"
+          }
+        },
+        "1638391973510d5115-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "1638391973510d5115-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1638391973510d5115-0",
+        "1638391973510d5115-1",
+        "1638391973510d5115-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/woman-practicing-her-skincare-routine.jpg",
+        "image_2": "shopify:\/\/shop_images\/205bc6d6_0634.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "end-end",
+        "show_text_box": true,
+        "desktop_content_alignment": "right",
+        "color_scheme": "accent-2",
+        "mobile_content_alignment": "right",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
@@ -251,6 +302,7 @@
     "featured_products",
     "collage",
     "video",
-    "multi_column"
+    "multi_column",
+    "1638391973b270ad0f"
   ]
 }
