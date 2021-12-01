@@ -298,6 +298,56 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
+    },
+    "16383920995ef713c0": {
+      "type": "image-banner",
+      "blocks": {
+        "1638392099106bf552-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Top left",
+            "heading_size": "medium"
+          }
+        },
+        "1638392099106bf552-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "1638392099106bf552-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1638392099106bf552-0",
+        "1638392099106bf552-1",
+        "1638392099106bf552-2"
+      ],
+      "settings": {
+        "image_2": "shopify:\/\/shop_images\/AcidLeague_Hero_Image.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "start-start",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "inverse",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
@@ -308,6 +358,7 @@
     "featured_products",
     "collage",
     "video",
-    "multi_column"
+    "multi_column",
+    "16383920995ef713c0"
   ]
 }
