@@ -86,10 +86,10 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/image_230.png",
         "image_2": "shopify:\/\/shop_images\/Screenshot_2021-10-21_at_12.41_2.png",
-        "image_overlay_opacity": 30,
+        "image_overlay_opacity": 20,
         "image_height": "medium",
         "adapt_height_first_image": false,
-        "desktop_content_position": "center flex-start",
+        "desktop_content_position": "center-start",
         "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "accent-1",
