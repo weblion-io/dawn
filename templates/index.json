@@ -1,53 +1,5 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Share information about your brand with your customers.",
-            "heading_size": "large"
-          }
-        },
-        "c4b1da8e-e8e1-4d86-ba8e-de4acf017edc": {
-          "type": "text",
-          "settings": {
-            "text": "Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Vinegar",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "Sodas",
-            "button_link_2": "shopify:\/\/products\/bo-ivy-brown",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "c4b1da8e-e8e1-4d86-ba8e-de4acf017edc",
-        "button"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/AcidLeague-Experimental-Soda-Vinegars-Orange-Crop_1080x_ba7e897c-0fa0-4978-b9f0-5a28fe28a4fc.jpg",
-        "image_overlay_opacity": 10,
-        "image_height": "large",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "start-start",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "1637778587301ff5b9": {
       "type": "image-banner",
       "blocks": {
@@ -93,6 +45,54 @@
         "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "accent-1",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Share information about your brand with your customers.",
+            "heading_size": "large"
+          }
+        },
+        "c4b1da8e-e8e1-4d86-ba8e-de4acf017edc": {
+          "type": "text",
+          "settings": {
+            "text": "Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Vinegar",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "Sodas",
+            "button_link_2": "shopify:\/\/products\/bo-ivy-brown",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "c4b1da8e-e8e1-4d86-ba8e-de4acf017edc",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/AcidLeague-Experimental-Soda-Vinegars-Orange-Crop_1080x_ba7e897c-0fa0-4978-b9f0-5a28fe28a4fc.jpg",
+        "image_overlay_opacity": 10,
+        "image_height": "large",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "start-start",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-2",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": true,
         "show_text_below": true
@@ -402,8 +402,8 @@
     }
   },
   "order": [
-    "image_banner",
     "1637778587301ff5b9",
+    "image_banner",
     "1638391973b270ad0f",
     "rich_text",
     "featured_products",
