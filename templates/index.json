@@ -348,6 +348,57 @@
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
+    },
+    "1638392448183af7b8": {
+      "type": "image-banner",
+      "blocks": {
+        "163839244846b69e78-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "medium"
+          }
+        },
+        "163839244846b69e78-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "163839244846b69e78-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "163839244846b69e78-0",
+        "163839244846b69e78-1",
+        "163839244846b69e78-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/PassionFruitOolong-Cropped_1000x_1a8fbab1-a8e0-4ca7-b0d5-5298e1ae6fee.jpg",
+        "image_2": "shopify:\/\/shop_images\/2021-08063-Proxies-177_1000x_07887254-e5c7-4386-bdd7-8ca2d619eba2.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "start-end",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
@@ -359,6 +410,7 @@
     "collage",
     "video",
     "multi_column",
-    "16383920995ef713c0"
+    "16383920995ef713c0",
+    "1638392448183af7b8"
   ]
 }
