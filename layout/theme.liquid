@@ -1,12 +1,20 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+    {% if customer %}
+      {% assign isCustomer = true %}
+    {% else %}
+      {% assign isCustomer = false %}
+    {% endif %}
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preload" href="{{ 'custom-fonts.css' | asset_url }}" as="style">
+    <link rel="preload" href="{{ 'hl-global.css' | asset_url }}" as="style">
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
@@ -15,29 +23,35 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
-
-    <title>
-      {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
-    </title>
+    
+    {% if template == 'collection' and current_tags != blank %}
+      <title>Shop Products Tagged '{{ current_tags.first }}' Here | {{ shop.name }}</title>
+    {% else %}
+      <title>{{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}</title>
+    {% endif %}
 
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
-    {% render 'meta-tags' %}
-
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <link rel="stylesheet" href="{{ 'custom-fonts.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'hl-global.css' | asset_url }}" defer="defer">
+    <script src="{{ 'jquery-3.6.0.min.js' | asset_url }}" defer="defer"></script>
+    
     {{ content_for_header }}
+    
+    {% comment %}
+    Edit and allow later
+
+    {{ content_for_header }}
+    
 
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
-
+    
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
@@ -107,67 +121,220 @@
         }
       }
     {% endstyle %}
+    {% endcomment %}
+  <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/6qmKw1ysiIrum1rP-imhHg" async></script>
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
+    <!-- Ordergroove -->
+    {%- render 'ordergroove_static_asset' -%}
+  
+    <!-- Yotpo -->
+    {% render 'yotpo-theme-scripts' %}
+  </head>
 
-    {%- unless settings.type_body_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
-    {%- endunless -%}
-    {%- unless settings.type_header_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
-    {%- endunless -%}
-
-    {%- if settings.predictive_search_enabled -%}
-      <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
-    {%- endif -%}
-
-    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-  {%- render 'ordergroove_static_asset' -%}</head>
-
-  <body class="gradient">
-    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ "accessibility.skip_to_text" | t }}
-    </a>
-
+  <body>
     {% section 'announcement-bar' %}
     {% section 'header' %}
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    {% comment %}
+    <div id="MainContent" class="container-width">
+      <div class="page-width">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Donec ac odio tempor orci dapibus ultrices. Dui sapien eget mi proin sed libero enim. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Consectetur lorem donec massa sapien faucibus et molestie ac. Id volutpat lacus laoreet non curabitur gravida. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim. Ut lectus arcu bibendum at varius. Nibh nisl condimentum id venenatis a condimentum vitae sapien. Nulla pellentesque dignissim enim sit amet venenatis. Vitae elementum curabitur vitae nunc sed. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Vitae turpis massa sed elementum tempus egestas sed. Purus ut faucibus pulvinar elementum integer enim neque. Non pulvinar neque laoreet suspendisse interdum consectetur. Malesuada fames ac turpis egestas sed tempus. In aliquam sem fringilla ut morbi. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Sit amet aliquam id diam maecenas ultricies mi eget mauris.</p>
+        <p>Vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Purus non enim praesent elementum facilisis. Nisl nunc mi ipsum faucibus vitae. In iaculis nunc sed augue lacus. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Vel eros donec ac odio tempor orci. Quam quisque id diam vel quam elementum pulvinar. Mauris pellentesque pulvinar pellentesque habitant. Nulla aliquet enim tortor at auctor urna. Cras sed felis eget velit aliquet sagittis id consectetur. Sit amet massa vitae tortor. Ornare arcu dui vivamus arcu. Malesuada proin libero nunc consequat interdum varius sit amet mattis. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Tellus elementum sagittis vitae et leo duis ut.</p>
+        <p>In est ante in nibh mauris cursus mattis molestie. Nec dui nunc mattis enim ut tellus. Urna duis convallis convallis tellus id interdum velit. Diam quis enim lobortis scelerisque fermentum. Nunc sed augue lacus viverra vitae congue eu consequat ac. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Orci ac auctor augue mauris augue. Hendrerit dolor magna eget est lorem ipsum dolor sit. Posuere urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Risus feugiat in ante metus dictum at.</p>
+        <p>Libero id faucibus nisl tincidunt eget nullam. In hendrerit gravida rutrum quisque non tellus. Iaculis at erat pellentesque adipiscing commodo elit. Tellus in hac habitasse platea. Diam quis enim lobortis scelerisque. Interdum posuere lorem ipsum dolor sit amet. Varius quam quisque id diam. Turpis cursus in hac habitasse platea dictumst. Neque convallis a cras semper auctor. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Porta non pulvinar neque laoreet suspendisse. Nunc consequat interdum varius sit amet mattis vulputate. Lectus proin nibh nisl condimentum id venenatis. Egestas purus viverra accumsan in nisl nisi scelerisque eu. Pellentesque adipiscing commodo elit at imperdiet dui. Volutpat odio facilisis mauris sit amet massa. In fermentum posuere urna nec tincidunt praesent semper feugiat. Diam vel quam elementum pulvinar etiam non quam. Tempor orci dapibus ultrices in iaculis nunc sed.</p>
+        <p>Quis imperdiet massa tincidunt nunc pulvinar sapien et. Ipsum dolor sit amet consectetur adipiscing. Eu nisl nunc mi ipsum faucibus vitae aliquet nec. Urna porttitor rhoncus dolor purus non enim. Id diam vel quam elementum. Aliquet bibendum enim facilisis gravida. Pellentesque dignissim enim sit amet venenatis urna cursus eget. Scelerisque viverra mauris in aliquam sem fringilla ut. Pharetra massa massa ultricies mi quis. Mi bibendum neque egestas congue quisque. In nulla posuere sollicitudin aliquam ultrices sagittis.</p>
+        <p>Vel pretium lectus quam id leo in vitae turpis massa. Tellus in hac habitasse platea. Adipiscing commodo elit at imperdiet dui accumsan sit amet. Nibh venenatis cras sed felis eget velit aliquet sagittis id. Vitae justo eget magna fermentum iaculis. Dui accumsan sit amet nulla facilisi morbi. Blandit massa enim nec dui nunc mattis enim ut. Vitae ultricies leo integer malesuada. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Justo laoreet sit amet cursus. Cursus risus at ultrices mi tempus. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing.</p>
+        <p>Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Dictumst quisque sagittis purus sit amet volutpat consequat. Facilisis sed odio morbi quis commodo odio. Sed enim ut sem viverra. Vel fringilla est ullamcorper eget nulla. Pellentesque elit eget gravida cum sociis natoque. Convallis a cras semper auctor neque vitae tempus quam. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Mauris a diam maecenas sed enim ut sem. Porta lorem mollis aliquam ut porttitor leo. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Vel fringilla est ullamcorper eget nulla facilisi etiam. Nec ullamcorper sit amet risus. Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi. Eget gravida cum sociis natoque penatibus. Enim ut tellus elementum sagittis vitae et leo. Sem et tortor consequat id porta nibh. Euismod quis viverra nibh cras pulvinar mattis nunc sed. Lectus mauris ultrices eros in cursus. Cursus euismod quis viverra nibh cras pulvinar.</p>
+        <p>Arcu non odio euismod lacinia at quis. Aliquam sem fringilla ut morbi. Etiam tempor orci eu lobortis elementum nibh tellus molestie. In massa tempor nec feugiat nisl pretium fusce id velit. Tempus quam pellentesque nec nam aliquam sem et tortor. Congue quisque egestas diam in arcu. Sit amet justo donec enim diam vulputate ut pharetra sit. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Morbi quis commodo odio aenean. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Blandit libero volutpat sed cras ornare. Eu lobortis elementum nibh tellus molestie nunc. Neque viverra justo nec ultrices dui sapien eget. Integer enim neque volutpat ac. Vitae aliquet nec ullamcorper sit amet risus nullam. Sed euismod nisi porta lorem mollis aliquam. Viverra justo nec ultrices dui. Habitant morbi tristique senectus et.</p>
+        <p>Ipsum dolor sit amet consectetur adipiscing elit duis. Molestie a iaculis at erat pellentesque. Sem fringilla ut morbi tincidunt augue interdum velit euismod in. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Tortor at auctor urna nunc. Porttitor massa id neque aliquam vestibulum morbi. A arcu cursus vitae congue mauris rhoncus aenean vel. Aenean euismod elementum nisi quis eleifend quam adipiscing. Sodales ut eu sem integer vitae justo. Bibendum enim facilisis gravida neque convallis a cras semper auctor. Leo vel fringilla est ullamcorper eget nulla. Cursus euismod quis viverra nibh cras pulvinar mattis. Etiam tempor orci eu lobortis elementum.</p>
+        <p>Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Sem viverra aliquet eget sit amet tellus cras adipiscing. Amet volutpat consequat mauris nunc congue nisi vitae. Fusce ut placerat orci nulla pellentesque dignissim enim. Fames ac turpis egestas integer eget aliquet. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est. Eget velit aliquet sagittis id consectetur. Nunc sed velit dignissim sodales ut eu. Commodo viverra maecenas accumsan lacus vel. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Mollis aliquam ut porttitor leo a. Scelerisque varius morbi enim nunc faucibus a pellentesque. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Sem nulla pharetra diam sit amet nisl suscipit adipiscing.</p>
+      </div>
+    </div>
+    {% endcomment %}
+
+    <main id="MainContent" class="container-width" role="main" tabindex="-1">
       {%- render 'ordergroove_global' -%}{{ content_for_layout }}
     </main>
-
+    
     {% section 'footer' %}
-
-    <ul hidden>
-      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
-    </ul>
-
+    
+    {% render 'cart-drawer' %}
+    
+    {% render 'loading-modal' %}
+    
     <script>
-      window.shopUrl = '{{ shop.url }}';
+      let megaMenu = false;
+      
+      (function() {
+        //hide bar before load
+        if (sessionStorage.getItem("showAnnouncements") != null) {
+          document.getElementById("announcementBar").style.display = "none";
+          document.getElementById("mainMenu").style.top = '0px';
+          if (window.innerWidth > 1079) {
+            document.getElementById("MainContent").style.marginTop = '130px';
+            document.getElementById("navDrawer").style.top = '128px';
+          } else {
+            document.getElementById("MainContent").style.marginTop = '77px';
+            document.getElementById("navDrawer").style.top = '75px';
+          }            
+        }
+        
+        document.body.style.visibility="hidden";
+        var fallback=self.setTimeout(function(){
+          document.body.style.visibility="visible";
+        },75);
+      })();
+  
+      document.addEventListener("DOMContentLoaded", function () {  
+        
+        if ($(window).width() < 768) {
+          //Mobile Megamenu Launcher
+          $('.menu-launcher').on('click', e  => { 
+            if ($('#navDrawer').is(':visible')) {
+              resetAccordions();
+            }
+
+            $('.close-menu').toggle();
+            $('.open-menu').toggle();
+            $('#navDrawer').slideToggle();
+          });
+        } else {
+          let initPosition = $(window).scrollTop();
+          
+          //Megamenu launcher
+          $('.menu-launcher').on('click', e  => { toggleMenu(false) });
+          $('#navDrawer').on('mouseleave', e => { toggleMenu(true) });
+          $(window).scroll( e => { 
+            toggleMenu(true);
+            closeDropdowns();
+            
+            let nPosition = $(window).scrollTop();
+            //console.log('Position: '+initPosition+', nPosition: '+nPosition);
+            
+            
+            if(nPosition > initPosition && nPosition > 100) {
+              //Scrolling Down
+              $('nav').animate({top:-180},50);
+              if($('#announcementBar').is(':visible')) {
+                $('#announcementBar').animate({top:-50},50);
+              }
+            } else {
+              //Scrolling Down
+              if($('#announcementBar').is(':visible')) {
+                $('nav').animate({top:50},50);
+                $('#announcementBar').animate({top:0},50);
+              } else {
+                $('nav').animate({top:0},50);
+              }
+            }
+            
+            initPosition = nPosition;
+          });
+
+          //Individual Toplevel Menu Controls
+          $('li a.hover-effect').on('mouseover', function() {
+            if(!$(this).next('.nav-dropdown').is(':visible')) {
+              closeDropdowns();
+              $(this).next('.nav-dropdown').slideToggle(250);
+            }
+            toggleMenu(true);
+          });
+
+          $('.nav-dropdown').on('mouseleave', e => { closeDropdowns() });
+          $('#navIcons').on('mouseover', e => { 
+            closeDropdowns();
+          });
+        }
+        
+        //Mobile Megamenu Accordions
+        $('.accordion').on('click', function() {
+          let accordionWrapper = $(this).closest('.accordion-wrapper').attr('data-accordion');
+          console.log('Accordion section clicked: '+accordionWrapper);
+          linkAccordion($(this),accordionWrapper);
+        });
+        
+        //Open Cart Drawer From Cart Icon
+        $('.cart-launcher').on('click', function() {
+          toggleCartDrawer();
+        });
+        
+        //Close Cart Drawer With X
+        $('.close-cart-drawer, #continue').on('click', function() {
+          toggleCartDrawer();
+        });
+        
+      });
+	
+      function linkAccordion(x,y) {
+        let open = false;
+
+        x.next('ul').is(':visible') ? open = true : open = false;
+
+        resetAccordions(y);
+
+        if(!open) {
+          x.toggleClass('open');
+          x.children('.plus-icon').toggle('fast');
+          x.children('.minus-icon').toggle('fast');
+          x.next('ul').slideToggle('fast');
+        }
+      }
+      
+      function resetAccordions(x) {
+        $('.accordion-wrapper[data-accordion="'+x+'"] h5').removeClass('open');
+        $('.accordion-wrapper[data-accordion="'+x+'"] ul').slideUp('fast');
+        $('.accordion-wrapper[data-accordion="'+x+'"] .plus-icon').show();
+        $('.accordion-wrapper[data-accordion="'+x+'"] .minus-icon').hide();
+      }
+      
+      function closeDropdowns() {
+        $('.nav-dropdown').slideUp('fast')
+      }
+
+      function toggleMenu(closeOnly) {
+        if(closeOnly) {
+          if(megaMenu) {
+            $('#navDrawer').slideUp(250);
+            $('.close-menu').toggle();
+            $('.open-menu').toggle();
+            megaMenu = !megaMenu;
+          }
+        } else {
+          megaMenu ? $('#navDrawer').slideUp(250) : $('#navDrawer').slideDown(250);
+          $('.close-menu').toggle();
+          $('.open-menu').toggle();
+          megaMenu = !megaMenu;
+        }
+      }
+      
+      function loadingModal(x) {
+        window.location.href = '/checkout';
+        $('#loadingModal p').text(x);
+        $('#loadingModal').show();
+      }
+
+    </script>
+    
+    <script>
+      function debounce(fn, wait) {
+        let t;
+        return (...args) => {
+          clearTimeout(t);
+          t = setTimeout(() => fn.apply(this, args), wait);
+        };
+      }
+
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
         cart_change_url: '{{ routes.cart_change_url }}',
         cart_update_url: '{{ routes.cart_update_url }}',
         predictive_search_url: '{{ routes.predictive_search_url }}'
       };
-
-      window.cartStrings = {
-        error: `{{ 'sections.cart.cart_error' | t }}`,
-        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`
-      }
-
-      window.variantStrings = {
-        addToCart: `{{ 'products.product.add_to_cart' | t }}`,
-        soldOut: `{{ 'products.product.sold_out' | t }}`,
-        unavailable: `{{ 'products.product.unavailable' | t }}`,
-      }
-
-      window.accessibilityStrings = {
-        shareSuccess: `{{ 'general.share.success_message' | t }}`,
-      }
     </script>
-
-    {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
+    
+    {% if template contains 'product' %}
+    <script src="{{ 'product-page.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'add-to-cart.js' | asset_url }}" defer="defer"></script>
+    {% endif %}
+    
   </body>
 </html>
